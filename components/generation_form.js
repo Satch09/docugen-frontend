@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import useSwr from "swr";
 import styles from "../styles/Home.module.css";
-export default function InputForm() {
+export default function GenerationForm() {
   const {
     register,
     handleSubmit,
@@ -11,7 +11,7 @@ export default function InputForm() {
   const onSubmit = (data) => console.log(data);
   const fetcher = (url) => fetch(url).then((res) => res.json());
 
-  const { data, error } = useSwr("/api/reports", fetcher);
+  const { data, error } = useSwr("/api/generate_instruments", fetcher);
 
   if (error) return <div>Failed to load reports</div>;
   if (!data) return <div>Loading...</div>;
@@ -19,7 +19,7 @@ export default function InputForm() {
     /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className={styles.card_container}>
-        <h2>Document Selection</h2>
+        <h2>Generate Template</h2>
         <ul className={styles.list}>
           {data.map((input) => {
             return (

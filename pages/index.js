@@ -4,6 +4,7 @@ import FileUpload from "../components/file_upload";
 import InputForm from "../components/input_form";
 import styles from "../styles/Home.module.css";
 import dbmLogo from "../De_Beers_Logo.png";
+import GenerationForm from "../components/generation_form";
 
 export default function Home() {
   return (
@@ -58,8 +59,12 @@ export default function Home() {
             </p>
           </a> */}
         </div>
-        <InputForm />
-        <FileUpload />
+        <div className={styles.row_layout}>
+
+          <InputForm />
+          <GenerationForm />
+        </div>
+          <FileUpload />
       </main>
 
       <footer className={styles.footer}>

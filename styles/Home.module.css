@@ -6,6 +6,8 @@
   min-width: 500px;
 }
 
+
+
 .hero_container {
   height: 11vh;
   width: 100%;
@@ -40,7 +42,13 @@
 .container {
   padding: 0 2rem;
 }
-.layout
+
+.row_layout {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  /* border: 1px solid #eaeaea; */
+}
 
 .logo {
   padding: 1px;

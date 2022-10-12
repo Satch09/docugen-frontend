@@ -36,7 +36,6 @@ const uploadFile = async (e) => {
 export default function Upload() {
   return (
     <>
-
       <p>Upload .xlsx config file (max 1MB).</p>
       <input type="file" name='file_upload' onChange={uploadFile} accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" />
       <p>Files will automatically upload and download</p>
