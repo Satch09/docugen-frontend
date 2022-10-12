@@ -1,7 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
+import FileUpload from "../components/file_upload";
 import InputForm from "../components/input_form";
 import styles from "../styles/Home.module.css";
+import dbmLogo from "../De_Beers_Logo.png";
 
 export default function Home() {
   return (
@@ -13,7 +15,17 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Docugen v1</h1>
+        <div className={styles.hero_container}>
+
+          <Image src={dbmLogo}
+            className={styles.logo}
+            alt="Picture of the author"
+            width={100}
+            height={100}
+            priority
+          />
+        </div>
+        <h1 className={styles.title}>Docugem 0.1</h1>
 
         <p className={styles.description}>Technical Datapack Generation Tool</p>
 
@@ -37,20 +49,21 @@ export default function Home() {
             <p>Discover and deploy boilerplate example Next.js projects.</p>
           </a> */}
 
-          <a
+          {/* <a
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             className={styles.card}>
             <h2>Deploy &rarr;</h2>
             <p>
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
-          </a>
+          </a> */}
         </div>
         <InputForm />
+        <FileUpload />
       </main>
 
       <footer className={styles.footer}>
-        <a
+        {/* <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer">
@@ -58,7 +71,7 @@ export default function Home() {
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
-        </a>
+        </a> */}
       </footer>
     </div>
   );

@@ -41,6 +41,7 @@ const reports = [
     label: "Termination Schedule",
     type: "checkbox",
     defaultValue: null,
+    disabled: true,
     register: "report:termination_schedule",
   },
 ];

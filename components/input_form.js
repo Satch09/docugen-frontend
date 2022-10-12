@@ -18,31 +18,35 @@ export default function InputForm() {
   return (
     /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
     <form onSubmit={handleSubmit(onSubmit)}>
-      <ul className={styles.list}>
-        {data.map((input) => {
-          return (
-            <>
-              <li className={styles.list_item}>
-                <label key={input.register}>{input.label}</label>
-                <input
-                  key={input.label}
-                  {...input}
-                  {...register(input.register)}
-                  {...input.options}
-                />
-              </li>
-            </>
-          );
-        })}
-      </ul>
-      {/* register your input into the hook by invoking the "register" function */}
+      <div className={styles.card_container}>
+        <h2>Document Selection</h2>
 
-      {/* include validation with required or other standard HTML validation rules */}
-      {/* <input {...register("exampleRequired", { required: true })} /> */}
-      {/* errors will return when field validation fails  */}
-      {errors.exampleRequired && <span>This field is required</span>}
+        <ul className={styles.list}>
+          {data.map((input) => {
+            return (
+              <>
+                <li className={styles.list_item}>
+                  <label key={input.register}>{input.label}</label>
+                  <input
+                    disabled={input.disabled}
+                    key={input.label}
+                    {...input}
+                    {...register(input.register)}
+                    {...input.options}
+                  />
+                </li>
+              </>
+            );
+          })}
+        </ul>
+        {/* register your input into the hook by invoking the "register" function */}
 
-      <input type="submit" />
+        {/* include validation with required or other standard HTML validation rules */}
+        {/* <input {...register("exampleRequired", { required: true })} /> */}
+        {/* errors will return when field validation fails  */}
+        {errors.exampleRequired && <span>This field is required</span>}
+        <input type="submit" />
+      </div>
     </form>
   );
 }
