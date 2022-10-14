@@ -1,0 +1,36 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-docugenfrontend-dev-92740-authRole",
+      "UnauthRoleArn": "arn:aws:iam::452606703528:role/amplify-docugenfrontend-dev-92740-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::452606703528:role/amplify-docugenfrontend-dev-92740-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-docugenfrontend-dev-92740-deployment",
+      "UnauthRoleName": "amplify-docugenfrontend-dev-92740-unauthRole",
+      "StackName": "amplify-docugenfrontend-dev-92740",
+      "StackId": "arn:aws:cloudformation:us-east-1:452606703528:stack/amplify-docugenfrontend-dev-92740/b2eab220-4b91-11ed-bd43-0a880b5edc6d",
+      "AmplifyAppId": "d1oe5goq5fq1jc",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-docugenfrontend-dev-92740-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d1oe5goq5fq1jc",
+          "type": "cicd"
+        }
+      },
+      "function": {
+        "docugenUpload": {
+          "deploymentBucketName": "amplify-docugenfrontend-dev-92740-deployment",
+          "s3Key": "amplify-builds/docugenUpload-77516248665848643952-build.zip"
+        }
+      },
+      "auth": {
+        "docugenfrontend": {}
+      },
+      "api": {
+        "docugenapi": {}
+      }
+    }
+  }
+}

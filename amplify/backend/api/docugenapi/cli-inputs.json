@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "paths": {
+    "/files": {
+      "name": "/files",
+      "lambdaFunction": "docugenUpload",
+      "permissions": {
+        "setting": "protected",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ],
+        "guest": [
+          "create",
+          "read"
+        ]
+      }
+    }
+  }
+}
